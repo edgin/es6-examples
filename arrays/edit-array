@@ -6,15 +6,55 @@ var myArray = ["jack","Samy","sally","betty"];
 
 myArray[11] = "Juliet";
 
-myArray.push("Libby", "Shannon");
+//Methods
+
+myArray.push("Libby", "Shannon"); // add two new elements
+
+myArray.sort(); // sort array
 
 myArray.unshift("Juliet"); // Adds "Juliet" at the beginning of the array
 
-myArray.splice(2, 0, "melon", "banana")
+myArray.splice(2, 0, "melon", "banana") //
 
-myArray.pop(); // Removes "Kate"
+myArray.pop(); // Removes last element
 
-myArray.shift(); // Removes "Jack"
+myArray.shift(); // Removes first element
+
+myArray.unshift(); //
+
+var thirdArray = myArray.concat(lostArray); // concatenating two existing arrays
+
+myArray.slice(start element, num of elements) // 
+
+// map
+
+var names = ["Bill", "Kelly", "John"];
+
+    var intros = names.map(function(name) {
+    	return "My name is " + name;
+    });
+
+    console.log(intros);
+    
+// Filter 
+
+ var numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+
+    var odd = numbers.filter(function(number) {
+        return number % 2 == 1;
+    });
+
+    console.log(odd);
+    
+  // Reduce 
+  
+      var numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+
+    var total = numbers.reduce(function(total, number) {
+        return total + number;
+    });
+
+    console.log(total);
 
 console.log(myArray.length); // Prints "6"
 
