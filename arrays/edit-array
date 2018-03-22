@@ -18,7 +18,9 @@ myArray.shift(); // Removes "Jack"
 
 console.log(myArray.length); // Prints "6"
 
-for (var i=0; i < myArray.length; i++) {
+var a = myarray;
+
+for (var i=0; i < a.length; i++) {
     console.log(a[i]);
 }
 
