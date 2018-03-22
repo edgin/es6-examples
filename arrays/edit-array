@@ -1,0 +1,22 @@
+var myArray = [];
+
+var lostArray = new Array("jimmy","sally","janny","naomy 2",34, ["Bob", "Leland", "Dale"]);
+
+var myArray = ["jack","Samy","sally","betty"];
+
+myArray[11] = "Juliet";
+
+myArray.push("Libby", "Shannon");
+
+myArray.unshift("Juliet"); // Adds "Juliet" at the beginning of the array
+
+myArray.splice(2, 0, "melon", "banana")
+
+myArray.pop(); // Removes "Kate"
+
+myArray.shift(); // Removes "Jack"
+
+console.log(myArray.length); // Prints "6"
+
+console.log(myArray);
+console.log(lostArray);
