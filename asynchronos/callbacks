@@ -1,0 +1,68 @@
+//multiplies two numbers
+function mult(x,y){ 
+   return x * y;  
+}
+
+//adds to numbers
+function add(x,y){  
+   return x + y;
+}
+
+//uses a callback to process two numbers
+function calculate(x,y,compute){ 
+   return compute(x,y);
+}
+
+var a = calculate(10,5,add); //uses add callback
+console.log(a); // logs 15
+
+var b = calculate(10,5,mult); //uses mult callback
+console.log(b); // logs 50
+
+
+//map()
+
+var array = [1,2,3,4,5];
+
+var newArray = array.map(function(x){ //uses an anonymous callback function to square each element
+    return x * x;
+});
+
+console.log(newArray);
+// logs [1,4,9,16,25]
+
+
+//filter
+
+var array = [1,2,3,4,5];
+
+function isEven(x){ //checks if a value is even
+   return x % 2 == 0; 
+}
+
+var newArray = array.filter(isEven); //uses a callback to check if an element is even
+
+console.log(newArray);
+// logs [2,4]
+
+
+//CPS - continuation passing style 
+
+function myFunction(x,callback){
+    callback(x);
+}
+
+var answer = 0;
+
+myFunction(10,function(x){ //callback1
+    var result = x * x; //result = 100
+
+    myFunction(result, function(x){ //callback2 within callback 1
+        var result2 = x + x; //result2 = 200
+
+        myFunction(result2, function(x){ //callback 3 within callback 2
+            answer = x + 100;
+            console.log(answer); // logs 300
+        })
+    })
+});
