@@ -66,3 +66,25 @@ myFunction(10,function(x){ //callback1
         })
     })
 });
+
+
+
+// setTimeout()
+
+setTimeout(function(){
+    console.log("hello")  
+},1000); //waits 1 second
+
+/* Console Output:
+   > "hello"  <--after 1 second
+/*
+
+//clearTimeout()
+
+var timeout = setTimeout(function(){
+    console.log("hello")  
+},1000); //waits 1 second
+
+clearTimeout(timeout); //clears the setTimeout callback from running
+
+//nothing gets logged
