@@ -88,3 +88,24 @@ var timeout = setTimeout(function(){
 clearTimeout(timeout); //clears the setTimeout callback from running
 
 //nothing gets logged
+
+//example for setTimeout and setInterval 
+function runSetTimeout(){
+  setTimeout(function(){
+    console.log("hello")
+  },5000);
+}
+
+var interval;
+
+function runSetInterval(){
+  var count = 0;
+  
+  interval = setInterval(function(){
+    count++;
+    console.log(count);
+  },1000);
+}
+
+runSetInterval();
+runSetTimeout();
