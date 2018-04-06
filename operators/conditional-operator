@@ -1,0 +1,8 @@
+// variablename = (condition) ? value1:value2 
+
+//  if (condition)
+//   result = 'something';
+//else
+//   result = 'somethingelse';
+
+//   result = (condition) ? 'something' : 'somethingelse';
