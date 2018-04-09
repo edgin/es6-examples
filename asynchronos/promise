@@ -14,3 +14,38 @@ promise.then(function(val){
 }).catch(function(err){
   console.log("error :"+ err);
 })
+
+
+// runFunction().then(successFunc, failureFunc);
+
+//example 1
+
+function delay(t){
+  return new Promise(function(resolve){
+    return setTimeout(resolve, t)
+  });
+}
+function logHi(){
+  console.log('hi');
+}
+delay(2000).then(logHi);
+
+//example 2 
+//chaining and catch
+
+new Promise(function(resolve, reject) {
+  setTimeout(() => resolve(2), 2000);
+
+}).then((result) => {
+  console.log(result);
+  return result + 2;
+}).then((result) => {
+   throw new Error('FAILED HERE');
+  console.log(result);
+  return result + 2;
+}).then((result) => {
+  console.log(result);
+  return result + 2;
+}).catch((e) => {
+  console.log('error: ', e)
+});
