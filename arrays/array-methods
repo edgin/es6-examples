@@ -5,7 +5,7 @@ Foreach takes a callback function and run that callback function on each element
 
 var sample = [1, 2, 3];
 // es5
-sample.forEach(function (elem, index){
+sample.forEach(function (elem, index,array){
    console.log(elem + ' comes at ' + index);
 })
 // es6
