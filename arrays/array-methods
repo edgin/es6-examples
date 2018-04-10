@@ -1,3 +1,4 @@
+
 Foreach
 
 Foreach takes a callback function and run that callback function on each element of array one by one.
