@@ -32,7 +32,8 @@ var result = sample.filter(elem => elem !== 2)
 /* output */
 [1, 3]
 
-Map 
+Map
+
 array.map(function(currentValue, index, arr), thisValue)
 
 var sample = [1, 2, 3] // i am never gonna change Boo! Yeah
@@ -49,6 +50,7 @@ console.log(mapped);
 Reduce 
 array.reduce(function(total, currentValue, currentIndex, arr), initialValue)
 
+example #1 
 
 var sample = [1, 2, 3] // here we meet again
 // es5
@@ -58,3 +60,24 @@ var sum = sample.reduce(function(sum, elem){
 // es6
 var sum = sample.reduce((sum, elem) => sum + elem)
 console.log(sum)
+
+example #2 
+
+var orders = [
+  { amount: 250},
+  { amount: 330},
+  { amount: 450},
+  { amount: 560},
+  { amount: 670}
+]
+
+// var totalAmount = orders.reduce(function(sum, order){
+//            console.log('hello', sum, order)
+//            return sum + order.amount
+//            },0);
+
+var totalAmount = orders.reduce((sum, order) => sum + order.amount, 0)
+
+console.log(totalAmount);
+
+
