@@ -1,0 +1,46 @@
+
+Object Types (Blueprints) (Classes)
+
+function Person(first, last, age, eye) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eye;
+}
+
+Using This in Constructors 
+
+function Book(name, year) {
+  this.name = name;
+  this.year = '(' + year + ')';
+}
+
+Object type 
+
+var myFather = new Person("John", "Doe", 50, "blue");
+
+Adding a Method to an Object
+
+myFather.name = function () {
+    return this.firstName + " " + this.lastName;
+};
+
+Adding a Property to a Constructor
+
+function Person(first, last, age, eyecolor) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eyecolor;
+    this.nationality = "English";
+}
+
+Adding a Method to a Constructor
+
+function Person(first, last, age, eyecolor) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eyecolor;
+    this.name = function() {return this.firstName + " " + this.lastName;};
+}
