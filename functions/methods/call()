@@ -1,0 +1,41 @@
+call()
+//function.call(thisArg, arg1, arg2, ...)
+
+
+// examples #1
+function superJump(action){
+  return this.name + " is not going to " + action ;
+}
+
+//Object litterals 
+
+var Dog1 = {
+  name: 'booboo',
+  legs: 4
+}
+var Dog2 = {
+  name: 'HooHoo',
+  legs: 3
+}
+
+console.log(superJump.call(Dog1, "bite"))
+
+//examples #2
+
+function Product(name, price) {
+  this.name = name;
+  this.price = price;
+}
+
+function Food(name, price) {
+  Product.call(this, name, price);
+  this.category = 'food';
+}
+
+function Toy(name, price) {
+  Product.call(this, name, price);
+  this.category = 'toy';
+}
+
+var cheese = new Food('feta', 5);
+var fun = new Toy('robot', 40);
