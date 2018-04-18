@@ -1,5 +1,17 @@
 
 fun.bind(thisArg[, arg1[, arg2[, ...]]])
+//example #1
+
+let user = {
+  firstName: "John"
+};
+
+function func() {
+  alert(this.firstName);
+}
+
+let funcUser = func.bind(user);
+funcUser(); // John
 
 // example #2
 
